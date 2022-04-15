@@ -11,3 +11,7 @@ git push origin master
 升级pip：python -m pip --upgrade pip
 pip安装/卸载第三方包：pip install/uninstall pkgname
 
+[allure]
+安装：pip install allure-pytest
+生成报告：--alluredir 报告路径
+启动服务：allure serve 报告路径

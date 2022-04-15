@@ -34,17 +34,20 @@ data_li = [
 
 ids = ['正向用例','验证码错误']
 
-class Test_1:
+class Test_web:
 
     ip = 'http://120.92.35.79:9084'
+    header = {'Connect-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
 
     @pytest.mark.parametrize('phoneNumber,smsCode,ctype,exp',data_li,ids=ids)
-    def test_case1(self,phoneNumber,smsCode,ctype,exp):
+    def test_login(self,phoneNumber,smsCode,ctype,exp):
         url = self.ip+'/login'
         data = {'phoneNumber':phoneNumber,'smsCode':smsCode,'ctype':ctype}
-        r = requests.post(url,data=data)
+        r = requests.post(url,json=data,headers=self.header)
         res =r.json()
         assert res['msg'] == exp
 
 
 
+if __name__ == '__main__':
+    pytest.main(['-sv','login_test.py'])

@@ -4,5 +4,5 @@
 
 def pytest_collection_modifyitems(items):
     for item in items:
-        item.name = items.name.encode().decode('unicode_escape')
-        item.nodeid = items.nodeid.encode().decode('unicode_escape')
+        item.name = item.name.encode().decode('unicode_escape')
+        item._nodeid = item.nodeid.encode().decode('unicode_escape')

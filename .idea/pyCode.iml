@@ -8,6 +8,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="modou" />
     <orderEntry type="module" module-name="modouWeb" />
+    <orderEntry type="module" module-name="pytestTest" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="C:\Users\86133\.PyCharmCE2017.2\pyCode" />
