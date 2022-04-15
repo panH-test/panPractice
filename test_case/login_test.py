@@ -46,6 +46,5 @@ class Test_1:
         res =r.json()
         assert res['msg'] == exp
 
-if __name__ == '__main__':
-    pytest.main(['-s','login_test.py'])
+
 
